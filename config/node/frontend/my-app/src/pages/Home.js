@@ -1,8 +1,17 @@
 import React from 'react';
+import {Typography, Button} from "@mui/material";
 
 function Home(props) {
     return (
-        <div>Strona startowa react</div>
+        <div className="home">
+            <h1 className="home_header">GEOPORTAL</h1>
+
+            <Typography className="home_subtitle">
+                Geoportal tematyczny poświęcony danym przestrzennym
+            </Typography>
+
+            <Button className="home_button" variant="contained" size="large">START</Button>
+        </div>
     );
 }
 
