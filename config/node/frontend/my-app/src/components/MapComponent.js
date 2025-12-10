@@ -1,9 +1,10 @@
 import React, {useEffect, useRef} from 'react';
 import Map from "ol/Map";
-import TitleLayer from "ol/layer/Tile";
+import TileLayer from "ol/layer/Tile";
 import View from "ol/View";
 import OSM from "ol/source/OSM";
 import {useGeographic} from "ol/proj";
+import "ol/ol.css";
 
 
 function MapComponent(props) {
@@ -16,14 +17,15 @@ function MapComponent(props) {
             const map = new Map({
                 target: mapRef.current,
                 layers: [
-                    new TitleLayer({
+                    new TileLayer({
                         source: new OSM(),
                     })
                 ],
                 view: new View({
-                    center: [52, 21],
+                    center: [21, 52],
                     zoom:6,
                 })
+
             });
             return ()=>map.setTarget(null)
         },
