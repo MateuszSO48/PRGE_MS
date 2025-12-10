@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://MateuszSO48.github.io/PRGE_MS",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
