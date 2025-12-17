@@ -31,7 +31,7 @@ jobs:
           #DB
           POSTGRES_DB: ${{secrets.POSTGRES_DB}}
           POSTGRES_USER: ${{secrets.POSTGRES_USER}}
-          POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSSWORD}}
+          POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSWORD}}
 
         run: |
           docker-compose -f ./docker-compose/docker-compose-prge-remote.yml -p remote-prge up --build -d
