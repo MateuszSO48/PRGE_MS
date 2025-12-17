@@ -1,8 +1,8 @@
 x-environment:
   #DB
-  - &env-postgres-db POSRGRES_DB=${POSTGRES_DB}
-  - &env-postgres-user POSRGRES_DB=${POSTGRES_USER}
-  - &env-postgres-password POSRGRES_DB=${POSTGRES_PASSWORD}
+  - &env-postgres-db POSTRES_DB=${POSTGRES_DB}
+  - &env-postgres-user POSTGRES_DB=${POSTGRES_USER}
+  - &env-postgres-password POSTGRES_DB=${POSTGRES_PASSWORD}
 
 services:
   postgis:
