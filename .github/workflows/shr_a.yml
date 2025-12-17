@@ -12,7 +12,7 @@ permissions:
 
 
 jobs:
-  build-and-push:
+  build-and-deploy:
     name: Build & Push
     runs-on:
       - self-hosted
