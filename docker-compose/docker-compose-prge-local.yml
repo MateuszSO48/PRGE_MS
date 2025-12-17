@@ -23,7 +23,7 @@ services:
   geoserver:
    build:
      context: ..
-     dockerfile: docker//geoserver/Dockerfile
+     dockerfile: docker/geoserver/Dockerfile
    image: 'prge_2025_geoserver'
    container_name: 'prge_2025_geoserver'
    ports:
