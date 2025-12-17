@@ -27,7 +27,7 @@ jobs:
       - name: Uruchom środowisko docker-compose
         env:
           ENV_NAME: ${{github.ref_name}}
-          POSTGRES_PORT: ${{secrets.POSTGRES.PORT}}
+          POSTGRES_PORT: ${{secrets.POSTGRES_PORT}}
           GEOSERVER_PORT: ${{secrets.GEOSERVER_PORT}}
           #DB
           POSTGRES_DB: ${{secrets.POSTGRES_DB}}
