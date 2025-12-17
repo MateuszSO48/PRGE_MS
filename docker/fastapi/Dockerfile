@@ -1,0 +1,13 @@
+FROM python3.11-slim
+
+RUN apt-get update && apt-get install -y build-essential && rn -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY ./docker/fastapi/requirements.txt /app/requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY config/fastapi /app
+
+CMD ["unicorn", "app,main:app", "--host", "0.0.0.0", "--port", "10000"]
