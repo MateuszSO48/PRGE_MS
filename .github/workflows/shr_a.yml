@@ -16,6 +16,7 @@ jobs:
     name: Build & Push
     runs-on:
       - self-hosted
+
     environment: ${{github.ref_name}}
 
     steps:
@@ -24,7 +25,8 @@ jobs:
       - name: Print
         run: echo 'Witamy'
 
-      - name: Uruchom środowisko docker-compose
+      - name: uruchom środowisko docker-compose
+
         env:
           ENV_NAME: ${{github.ref_name}}
           POSTGRES_PORT: ${{secrets.POSTGRES_PORT}}
