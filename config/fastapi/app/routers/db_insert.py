@@ -1,9 +1,8 @@
 from fastapi import APIRouter
 from sqlalchemy import create_engine, text
+router_insert = APIRouter()
 
 from app.settings import db_name, db_user, db_password
-
-router_insert = APIRouter()
 
 
 def connect_to_db(db_name: str, db_user: str, db_password: str):
