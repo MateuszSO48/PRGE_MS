@@ -6,7 +6,7 @@ router_get_users = APIRouter()
 
 def connect_to_db(db_name: str, db_user: str, db_password: str):
     return create_engine(
-        f"postgresql://{db_user}:{db_password}@postgres:5432/{db_name}"
+        f"postgresql://{db_user}:{db_password}@postgis:5432/{db_name}"
     )
 
 @router_get_users.get("/get_users")
@@ -20,7 +20,7 @@ async def get_users():
             result = conn.execute(sqL_query)
             users={dict(row._mapping) for row in result}
 
-        return {"data": users}
+        return {"status": "success", "data": users}
     except Exception as e:
         print(f"Błąd podczas get_users")
         return {"error": str(e)}

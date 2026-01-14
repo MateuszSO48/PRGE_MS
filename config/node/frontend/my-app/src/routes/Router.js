@@ -19,6 +19,10 @@ const routes = createHashRouter([
             element:<Services/>
         },
         {
+            path: '/newuser',
+            element: <NewUser/>
+        },
+        {
             path:'/list',
             element:<ListOfItems/>
         },
