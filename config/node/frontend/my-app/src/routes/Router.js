@@ -1,5 +1,5 @@
 import {createHashRouter} from "react-router-dom";
-import {Home, About, Map, ListOfItems, Services} from "./LazyImports";
+import {Home, About, Map, ListOfItems, Services, NewUser} from "./LazyImports";
 
 const routes = createHashRouter([
   {
