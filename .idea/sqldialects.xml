@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/polska/polska_warstwa.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/budynki.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/drogi.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/jednostka_podziału_administracyjnego.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/kompleks_oswiaty.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/kompleks_sakralny_cmentarze.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/kompleks_sportowy.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/linia_elektroenergetyczna.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/miejscowosci.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/roslinosc_krzewiasta.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/../warstwy-geoportale/warstwy_sql/wody_powierzchniowe.sql" dialect="PostgreSQL" />
+  </component>
+</project>
