@@ -38,7 +38,7 @@ def get_coordinates(city: str):
 
 
 @router_insert.post("/insert_port")
-async def insert_port(user: PortData):
+async def insert_port(port: PortData):
     try:
         db_connection = connect_to_db(db_name=db_name, db_user=db_user, db_password=db_password)
 
@@ -59,7 +59,7 @@ async def insert_port(user: PortData):
         with db_connection.connect() as connection:
             result = connection.execute(sql_query, params)
             connection.commit()
-            print(f"Dodano port: {port.name}")
+            print(result)
 
     except Exception as e:
         print(e)
