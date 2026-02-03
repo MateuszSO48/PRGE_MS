@@ -26,7 +26,7 @@ function MapComponent(props) {
                         source: new TileWMS({
                             url: "http://localhost:9000/geoserver/prge/wms",
                             params: {
-                                'LAYERS': 'prge:budynki',
+                                'LAYERS': 'prge:ports',
                                 'TILES': true
                             },
                             serverType: 'geoserver',
