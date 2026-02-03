@@ -1,42 +1,55 @@
 import React from 'react';
-import {Button} from "@mui/material";
-import {Link} from "react-router-dom";
+import { Button } from "@mui/material";
+import { Link } from 'react-router-dom';
 
-function Services(props) {
-    return <div>
-        <div>Services</div>
-        <Button
-            className='services__button'
-            variant='contained'
-            size='large'
-            component={Link}
-            to='/map'
-        >
-            PRZEJDŹ DO MAPY
-        </Button>
+function Services() {
+  return (
+    <div className="services-page">
 
+      <h1 className="main-logo">
+        <span className="geo-part">GEO</span>
+        <span className="service-part">SERVICE</span>
+      </h1>
 
-        <Button
-            className='services__button'
-            variant='contained'
-            size='large'
-            component={Link}
-            to='/list'
-        >
-            PRZEJDŹ listy użytkowników
-        </Button>
+      <h2 className="services-header">
+        Przegląd dostępnych portów morskich
+      </h2>
+
+      <div className="buttons-container">
 
         <Button
-            className='services__button'
-            variant='contained'
-            size='large'
-            component={Link}
-            to='/newuser'
+          className="service-btn"
+          variant="contained"
+          size="large"
+          component={Link}
+          to="/map"
         >
-            Dodaj nowego użytkownika
+          MAPA INTERAKTYWNA
         </Button>
+
+        <Button
+          className="service-btn"
+          variant="contained"
+          size="large"
+          component={Link}
+          to="/list"
+        >
+          LISTA PORTÓW
+        </Button>
+
+        <Button
+          className="service-btn"
+          variant="contained"
+          size="large"
+          component={Link}
+          to="/add-port"
+        >
+          DODAJ NOWY PORT
+        </Button>
+
+      </div>
     </div>
-
+  );
 }
 
 export default Services;

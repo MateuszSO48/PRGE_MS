@@ -13,10 +13,9 @@ def connect_to_db(db_name: str, db_user: str, db_password: str):
     )
 
 
-class UserData(BaseModel):
+class PortData(BaseModel):
     name: str
-    posts: int
-    location: str
+    type: str
 
 
 def get_coordinates(city: str):
@@ -38,30 +37,29 @@ def get_coordinates(city: str):
     return [latitude, longitude]
 
 
-@router_insert.post("/insert_user")
-async def insert_user(user: UserData):
+@router_insert.post("/insert_port")
+async def insert_port(user: PortData):
     try:
         db_connection = connect_to_db(db_name=db_name, db_user=db_user, db_password=db_password)
 
-        geom = get_coordinates(user.location)
+        geom = get_coordinates(port.name)
 
         params = {
-            "name": user.name,
-            "posts": user.posts,
-            "location": user.location,
+            "name": port.name,
+            "type": port.type,
             "lat": geom[0],
             "lon": geom[1],
         }
 
         sql_query = text("""
-                         insert into users (name, posts, location, geom)
-                         values (:name, :posts, :location, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography); \
+                         insert into ports (name, type, geom)
+                         values (:name, :type, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography); \
                          """)
 
         with db_connection.connect() as connection:
             result = connection.execute(sql_query, params)
             connection.commit()
-            print(result)
+            print(f"Dodano port: {port.name}")
 
     except Exception as e:
         print(e)
