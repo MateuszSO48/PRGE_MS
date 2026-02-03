@@ -1,3 +1,150 @@
 @import 'variables.scss';
 @import "mixins";
 @import "main.scss";
+
+.home-page{
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-content-wrapper{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 50px;
+}
+
+.map-section{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  .poland-map-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+
+    path {
+      fill: $secondary-color !important;
+      stroke: darken($secondary-color, 10%);
+      stroke-width: 1px;
+    }
+
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.1));
+  }
+}
+
+.text-section{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-logo-home{
+  font-size: 4.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase;
+
+  .geo-part {
+    color: $primary-color;
+  }
+
+  .portal-part{
+    color: $white;
+  }
+}
+
+.home-subtitle{
+  color: #333;
+  margin-bottom: 3rem !important;
+  max-width: 450px;
+  line-height: 1.4 !important;
+}
+
+.start-btn-home{
+  background-color: $primary-color !important;
+  color: $white !important;
+  font-weight:bold !important;
+  padding: 12px 50px !important;
+  font-size: 1.2rem !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+  border: 2px solid white !important;
+}
+
+.start-btn-home:hover{
+  background-color: darken($primary-color, 10%) !important;
+}
+
+.services-page {
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.main-logo {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  .geo-part {
+    color: $primary-color;
+  }
+
+  .service-part {
+    color: $white;
+  }
+}
+
+
+.services-header {
+  color: $primary-color;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  font-weight: normal;
+}
+
+
+.buttons-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.service-btn {
+  background-color: $primary-color !important;
+  color: $white !important;
+  font-weight: bold !important;
+  padding: 15px 30px !important;
+  font-size: 0.9rem !important;
+  border-radius: 4px !important;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2) !important;
+}
+
+.service-btn:hover {
+  background-color: darken($primary-color, 10%) !important;
+}
